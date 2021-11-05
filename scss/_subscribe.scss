@@ -1,0 +1,70 @@
+.subscribe {
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    padding: 100px;
+    background-color: white;
+
+    .sub-p {
+        font-family: 'Lato-Italic';
+        color: $gray;
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .sub-email {
+        padding: 20px;
+        width: 300px;
+        border: 1px solid $lightgray;
+
+        &::placeholder {
+            color: $lightgray;
+            font-family: 'Lato-Italic';
+            font-size: 18px;
+        }
+
+        &:focus {
+            outline: 1px solid $green;
+        }
+    }
+
+    .sub-btn {
+        height: 58px;
+        width: 80px;
+        background-color: $green;
+        border: 1px solid $green;
+        color: white;
+        letter-spacing: 3px;
+
+        &:hover {
+            background-color: darken($color: $green, $amount: 15);
+        }
+
+        &:active {
+            background-color: darken($color: $green, $amount: 35);
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .subscribe {
+        padding: 50px 20px;
+
+        .sub-btn {
+            width: 300px;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .subscribe {
+        .sub-email {
+            width: 90%;
+        }
+        .sub-btn {
+            width: 90%;
+        }
+    }
+}

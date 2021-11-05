@@ -1,0 +1,132 @@
+@use 'sass:math';
+
+.second-grid-component {
+    display: grid;
+    width: 100%;
+    height: 600px;
+    grid-template-areas: "a b c d e e"
+                         "f f c d g h";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: (math.div(100%, 6));
+}
+.s-grid-1 {
+    grid-area: a;
+    background-image: url(../img/sg-1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.s-grid-2 {
+    grid-area: b;
+    background-image: url(../img/sg-2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.s-grid-3 {
+    grid-area: c;
+    background-image: url(../img/sg-3.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.s-grid-4 {
+    grid-area: d;
+    background-image: url(../img/sg-4.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+} 
+.s-grid-5 {
+    grid-area: e;
+    background-image: url(../img/sg-5.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: inset 0 0 0 1000px rgba(128, 204, 176, 0.7);
+} 
+.shop-now {
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.s-grid-6 {
+    grid-area: f;
+    background-image: url(../img/sg-6.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.s-grid-7 {
+    grid-area: g;
+    background-image: url(../img/sg-7.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.s-grid-8 {
+    grid-area: h;
+    background-image: url(../img/sg-8.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.discover { 
+    background-color: $darkgray;
+    width: 100%;
+    height: 200px;
+    display: flex;
+
+    .disc-btn {
+        display: flex;
+        margin: auto;
+        background-color: $darkgray;
+        border: 0.5px solid white;
+        padding: 15px 50px;
+        color: white;
+        letter-spacing: 2px;
+
+        &:hover {
+            background-color: $gray;
+        }
+
+        &:active {
+            background-color: $white;
+        }
+    }
+}
+
+@media screen and (max-width:1600px) {
+    .second-grid-component {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .second-grid-component {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .second-grid-component {
+        height: 1025px;
+        grid-template-areas: "a b c"
+                             "f f c"
+                             "d e e"
+                             "d g h";
+        grid-template-rows: 25%;
+        grid-template-columns: (math.div(100%, 3));
+    }
+}
+
+@media screen and (max-width:600px) {
+    .second-grid-component {
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .second-grid-component {
+        height: 400px;
+        grid-template-areas: "f"
+                             "e";
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 100%;
+    }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>AOD | Contact</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="background-img"
+        src="./img/contact/contact-back.png"
+        alt="header_background"
+      />
+      <h1 class="header-h1">CONTACT</h1>
+      <nav class="navbar">
+        <a href="./index.html"><img id="logo" src="./img/Logo.png" alt="Logo"></a>
+        <ul class="nav-menu">
+          <li class="nav-item menu-item">
+            <a href="./aboutus.html" class="nav-link">ABOUT US</a>
+          </li>
+          <li class="nav-item">
+            <p class="nav-separator">.</p>
+          </li>
+          <li class="nav-item menu-item">
+            <a href="./work.html" class="nav-link">WORK</a>
+          </li>
+          <li class="nav-item logo">
+            <a href="./index.html"><img src="./img/Logo.png" alt="Logo" /></a>
+          </li>
+          <li class="nav-item menu-item">
+            <a href="#" class="nav-link">SHOP</a>
+          </li>
+          <li class="nav-item">
+            <p class="nav-separator">.</p>
+          </li>
+          <li class="nav-item menu-item">
+            <a href="./contact.html" class="nav-link">CONTACT</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <section class="breadcrumb">
+      <ul class="breadcrumb-ul">
+        <li class="breadcrumb-li">
+          <a class="breadcrumb-a" href="./index.html">Home</a>
+        </li>
+        <li class="breadcrumb-li" id="current-page">Contact</li>
+      </ul>
+    </section>
+
+    <section class="contact-section">
+      <aside class="google-section">
+        <div class="google-llc">
+          <h1 class="google-h1">Google LLC</h1>
+          <p class="google-p">
+            1600 Amphitheatre Parkway<br />Mountain View, CA 94043<br />USA
+          </p>
+          <a class="google-a" href="#">View our other locations</a>
+        </div>
+        <br />
+        <div class="google-llc">
+          <h1 class="google-h1">Interested in working at AOD?</h1>
+          <p class="google-p">
+            <a class="google-a" href="#">Visit our Careers site</a> for
+            information, or search our current jobs.
+          </p>
+        </div>
+      </aside>
+
+      <section class="contact-main">
+        <h1 class="contact-h1">CONTACT US</h1>
+        <h2 class="contact-desc">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident
+          alias aliquam aut iste est fugiat ipsa ea atque amet delectus
+          voluptates, reprehenderit libero? Dignissimos sit omnis expedita quasi
+          eaque officiis.
+        </h2>
+        <img
+          class="contact-img"
+          src="./img/mid-grid-bike.png"
+          alt="black-bicycle"
+        />
+        <label class="contact-label">Lorem ipsum dolor sit amet</label>
+        <hr />
+        <br />
+        <h3 class="about-h3">Heading 3</h3>
+
+        <form class="contact-form">
+          <label class="contact-form-label">Name</label>
+          <input
+            class="contact-form-input"
+            type="text"
+            placeholder="Enter your name"
+          />
+
+          <label class="contact-form-label">E-mail address</label>
+          <input
+            class="contact-form-input"
+            type="email"
+            placeholder="Enter your e-mail address"
+          />
+          
+          <label class="contact-form-label">Subject</label>
+          <div class="contact-dropdown">
+            <input name="select_value" type="hidden" id="selectedValue">
+            <div class="display-value" id="displayValue" onclick="toggleOptions(event)">
+               <span class="value-text" id="valueText">Select</span>
+            </div>
+            <ul tabindex="0" class="select-container" id="selectContainer" onblur="toggleOptions(event)">
+               <li class="select-option" onclick="selected('This is the first option')">This is the first option</li>
+               <li class="select-option" onclick="selected('And this one is the second')">And this one is the second</li>
+               <li class="select-option" onclick="selected('What comes after two?')">What comes after two?</li>
+            </ul>
+         </div>
+
+          <label class="contact-form-label">Message</label>
+          <textarea
+            class="contact-form-textbox"
+            placeholder="Enter your message..."
+          ></textarea>
+
+          <div class="contact-form-checkbox">
+            <label class="contact-checkbox">I want to recieve weekly news and updates
+                <input class="checkbox-input" type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+              </label>
+          </div>
+
+          <input class="contact-button" type="submit" value="SEND" />
+        </form>
+      </section>
+    </section>
+
+    <section class="subscribe">
+      <img src="./img/Logo.png" alt="Logo" />
+      <p class="sub-p">Stay on the saddle!</p>
+      <input
+        class="sub-email"
+        type="email"
+        placeholder="Enter your e-mail..."
+      />
+      <button class="sub-btn">GO</button>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <h1 class="f-l-h1">AOD New York</h1>
+        <p class="f-l-p">
+          2250 Lexington Avenue <br />
+          New York, NY 10035 - info@domain.com
+        </p>
+      </div>
+      <div class="socials">
+        <img src="./img/twitter-icon.png" alt="twitter" />
+        <img src="./img/facebook-icon.png" alt="facebook" />
+        <img src="./img/pinterest-icon.png" alt="pinterest" />
+      </div>
+      <div class="footer-right">
+        <p class="f-r-p">Handcrafted by</p>
+        <img class="f-r-img" src="./img/YEBO-logo.png" alt="yebo" />
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

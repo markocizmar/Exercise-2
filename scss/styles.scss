@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.ttf');
+}
+@font-face {
+    font-family: 'Lato-Italic';
+    src: url('../fonts/Lato-Italic.ttf');
+}
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('../fonts/Lato-Bold.ttf');
+}
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('../fonts/Lato-Light.ttf');
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+$green: #64C29E;
+$gray: #848789;
+$white: #F7F7F7;
+$slidegray: #A9AFB3;
+$darkgray: #282F35;
+$lightgray: #cdcdcd;
+
+@import './header';
+@import './generation';
+@import './grid';
+@import './slider';
+@import './second-grid';
+@import './subscribe';
+@import './footer';
+@import './about';
+@import './work';
+@import './contact';

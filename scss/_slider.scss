@@ -1,0 +1,64 @@
+.swiper-index {
+    width: 100%;
+    height: 400px;
+    margin: 50px auto;
+
+    .swiper-slide-index {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;  
+    }
+}
+
+.swiper-h1 {
+    margin: 20px;
+}
+
+.slider-span {
+    color: $lightgray;
+    font-family: 'Lato-Light';
+}
+
+.swiper-p {
+    color: $gray;
+    font-size: 25px;
+    width: 950px;
+    text-align: center;
+    font-family: "Lato-italic";
+}
+
+@media screen and (max-width: 1000px) {
+    .swiper-p {
+        width: 600px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .swiper-p {
+        font-size: 20px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .swiper-h1 {
+        font-size: 20px;
+    }
+    .swiper-p {
+        font-size: 15px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .swiper-h1 {
+        font-size: 18px;
+    }
+    .swiper-p {
+        font-size: 12px;
+        width: 250px;
+    }
+}

@@ -1,0 +1,38 @@
+.new-generation {
+    text-align: center;
+    padding: 50px;
+    padding-top: 70px;
+    background-color: $white;
+}
+
+.gen-icon {
+    margin: 20px;
+}
+
+.gen-h1 {
+    margin: 20px;
+    font-size: 28px;
+    word-spacing: 10px;
+}
+
+.gen-p {
+    color: $gray;
+    max-width: 1000px;
+    line-height: 30px;
+    font-size: 20px;
+    margin: 50px auto;
+}
+
+@media screen and (max-width:425px) {
+    .new-generation {
+        padding: 30px;
+    }
+    
+    .gen-icon {
+        margin: 0;
+    }    
+
+    .gen-h1 {
+        font-size: 24px;
+    }
+}

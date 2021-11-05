@@ -1,0 +1,213 @@
+.about-section {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 100px;
+
+    .accordion-section {
+        margin-left: 14%;
+        margin-right: 3%;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        
+        .la-boriosa {
+            background-color: white;
+            padding-top: 20px;
+        }
+    
+        .la-icon {
+            display: flex;
+            margin: auto;
+        }
+    
+        .la-img {
+            width: 100%;
+        }
+    
+        .la-h1 {
+            margin: 20px;
+            text-align: center;
+            letter-spacing: 3px;
+        }
+    
+        .la-p {
+            color: $gray;
+            line-height: 30px;
+            margin: 10%;
+        }
+    
+        .accordion {
+            color: black;
+            background-color: white;
+        }
+    
+        .accordion-container {
+            position: relative;
+            margin: 10px 10px;
+        }
+            
+        .accordion-label {
+            position: relative;
+            padding: 10px 0;
+            font-size: 20px;
+            color: $green;
+            cursor: pointer;
+        }
+    
+        .accordion-label::before {
+            content: '+';
+            color: $green;
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            font-size: 40px;
+            transform: translateY(-50%);
+        }
+        
+        .accordion-content {
+            position: relative;
+            background: white;
+            color: $gray;
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+        
+        .accordion hr {
+            width: 100;
+            margin-left: 0;
+            border: 1px solid $green;
+        }
+    
+        .accordion-container.active .accordion-content {
+            height: 150px;
+        }
+        
+        .accordion-container.active .accordion-label::before {
+            content: '-';
+            font-size: 40px;
+        }
+    }
+
+    .about-main {
+        display: flex;
+        flex-direction: column;
+        float: right;
+        margin-right: 14%;
+
+        .about-h1 {
+            letter-spacing: 5px;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .about-h2 {
+            margin-bottom: 20px;
+        }
+
+        .about-h3 {
+            margin-bottom: 20px;
+        }
+
+        .about-desc {
+            font-family: 'Lato-Light';
+            font-weight: normal;
+            line-height: 35px;
+            color: $gray;
+            margin-bottom: 20px;
+        }
+
+        .about-p {
+            line-height: 25px;
+            color: $gray;
+            margin-bottom: 20px;
+        }
+
+        .about-p-a {
+            color: $green;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        .about-img {
+            width: 100%;
+        }
+
+        .about-label {
+            font-family: 'Lato-Italic';
+            display: block;
+            text-align: center;
+            margin: 5px;
+            color: $gray;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .about-section {
+       .accordion-section {
+            margin-left: 10%;
+        }
+
+        .about-main {
+            margin-right: 10%;
+            width: 120%;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .about-section {
+       .accordion-section {
+            margin-left: 5%;
+        }
+
+        .about-main {
+            margin-right: 5%;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+
+        .accordion-section {
+            order: 2;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 90%;
+
+            .la-boriosa {
+                margin-right: 20px;
+                height: 100%;
+            }
+
+            .accordion {
+                height: 100%;
+            }
+        }
+
+        .about-main {
+            order: 1;
+            padding: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .about-section {
+        .accordion-section {
+            flex-direction: column;
+            width: 90%;
+
+            .la-boriosa {
+                margin-right: 0px;
+            }
+        }
+    }
+}

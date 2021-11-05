@@ -1,0 +1,233 @@
+@use 'sass:math';
+
+.grid-component {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "a a b"
+                         "a a b"
+                         "a a c"
+                         "d e e"
+                         "d e e"
+                         "f e e"
+                         "g h i"
+                         "g h i"
+                         "g j i";
+    grid-template-rows: repeat(9, (math.div(100%, 9)));
+    grid-template-columns: (math.div(100%, 3));
+    background-color: #ffffff;
+}
+
+.grid-p {
+    color: $gray;
+    line-height: 30px;
+    text-align: justify;
+    margin: 10%;
+}
+
+.grid-h1 {
+    letter-spacing: 3px;
+    margin: 20px;
+}
+
+.grid-img {
+    margin: 20px;
+}
+
+.grid-icon {
+    display: flex;
+    margin: 20% auto;
+}
+
+.top-grid-left {
+    grid-area: a;
+    background-image: url(../img/bike-top.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.top-grid-top {
+    grid-area: b;
+    text-align: center;
+    margin: auto;
+
+    &::after{
+        color: $gray;
+        content: "__________\00a0";
+    }
+}
+.top-grid-bottom {
+    grid-area: c;
+    background-image: url(../img/bike-seat.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.mid-grid-top {
+    grid-area: d;
+    text-align: center;
+    margin: auto;
+
+    &::after{
+        color: $gray;
+        content: "__________\00a0";
+    }
+}
+.mid-grid-bottom {
+    grid-area: f;
+    background-image: url(../img/mid-grid-seat.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.mid-grid-right {
+    grid-area: e;
+    background-image: url(../img/mid-grid-bike.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.bottom-grid-left {
+    grid-area: g;
+    background-image: url(../img/red-bike.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    .grid-icon {
+        margin: 50% auto;
+    }
+}
+.bottom-grid-top {
+    grid-area: h;
+    text-align: center;
+    margin: auto;
+
+    &::after{
+        color: $gray;
+        content: "__________\00a0";
+    }
+}
+.bottom-grid-bottom {
+    grid-area: j;
+    background-image: url(../img/red-wheel.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bottom-grid-right {
+    grid-area: i; 
+    background-image: url(../img/red-full.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@media screen and (max-width:1400px) {
+    .grid-component {
+        .grid-p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .grid-h1 {
+            font-size: 18px;
+        }
+        .grid-img {
+            margin: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:1150px) {
+    .grid-component {
+        .grid-p {
+            font-size: 12px;
+            line-height: 18px;
+        }
+        .grid-h1 {
+            font-size: 16px;
+        }
+        .grid-img {
+            margin: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:970px) {
+    .grid-component {
+        .grid-p {
+            font-size: 10px;
+            line-height: 16px;
+        }
+        .grid-h1 {
+            font-size: 16px;
+        }
+        .grid-img {
+            margin: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid-component {
+        grid-template-areas: "a b"
+                             "a b"
+                             "a c"
+                             "d e"
+                             "d e"
+                             "f e"
+                             "g h"
+                             "g h"
+                             "g j";
+        grid-template-rows: repeat(9, 180px);
+        grid-template-columns: 50%;
+
+        .grid-p {
+            font-size: 18px;
+            line-height: 20px;
+        }
+        .grid-h1 {
+            font-size: 20px;
+        }
+        .grid-img {
+            margin: 5px;
+        }
+    }
+
+    .top-grid-left {
+        background-size: inherit;
+    }
+
+    .mid-grid-right {
+        background-size: inherit;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .grid-component {
+        grid-template-areas: "a"
+                             "b"
+                             "e"
+                             "d"
+                             "g"
+                             "h";
+        grid-template-rows: repeat(6, (math.div(100%, 6)));
+        grid-template-columns: 100%;
+
+        .grid-p {
+            font-size: 18px;
+            line-height: 20px;
+        }
+        .grid-h1 {
+            font-size: 22px;
+        }
+    }
+}
+
+@media screen and (max-width:320px) {
+    .grid-component {
+        .grid-img {
+            margin-top: 10%;
+        }
+        .grid-h1 {
+            font-size: 20px;
+        }
+        .grid-p {
+            font-size: 14px;
+        }
+    }
+}
